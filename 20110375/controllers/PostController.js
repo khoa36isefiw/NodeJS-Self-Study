@@ -50,7 +50,9 @@ class PostController {
         });
 
         if (post) {
-            posts[pos] = data;
+            posts[pos].title = data.title;
+            posts[pos].description = data.description;
+            posts[pos].content = data.content;;
         }
 
         res.redirect('/');
