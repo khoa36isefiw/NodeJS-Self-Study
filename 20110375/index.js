@@ -1,25 +1,22 @@
-const express = require("express")
-const route = require('./routes/index.route.js');
-const morgan = require("morgan");
-const requestLogger = require('./middlewares/logger.js')
+const express = require('express');
+const {engine} = require('express-handlebars');
+const methodOverride = require('method-override');
 
-const app = express();
+const logger = require('./middlewares/logger');
+const route = require('./routes/index')
 const port = 5000;
 
-// loger method: POST, GET, URL
-app.use(requestLogger);
-// gửi dữ liệu qua client
-app.use(express.json());
+const app = express();
+app.use(express.json()) 
+app.use(express.urlencoded({ extended: true }))
 
+app.use(logger);
+app.use(methodOverride('_method'));
 
+app.engine('hbs', engine()); 
+app.set('view engine', 'hbs');   
+app.set('views', './views');
 
 route(app);
 
-app.use(requestLogger);
-
-
-// listen server at port 5000
-app.listen(port, () => {
-    console.log(`App listening on port http://localhost:${port}`);
-});
-
+app.listen(port, ()=> console.log(`App is listening on http://localhost:${port}`));
