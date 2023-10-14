@@ -66,7 +66,9 @@ function BlogApp() {
     
     <Router>
       <div>
-        <h1>Simple Blog</h1>
+        <Box>
+          <Typography variant='h3' color='greenYellow' fontWeight={'bold'} textAlign={'center'}>Simple Blog</Typography>
+        </Box>
           
 
           <Box sx={{ml: 12}}>

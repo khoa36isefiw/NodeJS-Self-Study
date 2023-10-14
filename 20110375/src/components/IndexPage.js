@@ -11,7 +11,7 @@ import {  CardActions, CardMedia, Button } from '@mui/material';
 
 function PostCard({ post, onDeletePost }) {
   return (
-    <Card sx={{ maxWidth: 300, ml: 12, boxShadow: '0px 2px 4px rgba(0, 0, 0, 1)' }}>
+    <Card sx={{ maxWidth: 300, ml: 6, boxShadow: '0px 2px 4px rgba(0, 0, 0, 1)' }}>
       <CardMedia
         sx={{ height: 240 }}
         image="https://i.pinimg.com/564x/48/d0/29/48d0291b1f85e88e6c0138987048efac.jpg"
