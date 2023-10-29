@@ -8,6 +8,6 @@
 2. Chạy lệnh: npm install
 3. Nếu thiếu express: npm install express (có thể hoặc không xảy ra)
 4. Chạy lệnh : npm run watch
----> Link: http://localhost:8000
----> Link video: https://drive.google.com/drive/u/0/folders/1XNJrBHYGYReTuoZ_0ffvlvKjp2iBWkE6
+##### Link: http://localhost:8000
+##### Link video: https://drive.google.com/drive/u/0/folders/1XNJrBHYGYReTuoZ_0ffvlvKjp2iBWkE6
       
