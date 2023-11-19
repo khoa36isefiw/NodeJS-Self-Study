@@ -30,8 +30,10 @@ function httpAbortLaunch (req, res) {
 
     if (!existsLaunchWithId(launchId)) {
     // if launch doesn't exist
+        console.log(launchId);  
         return res.status(404).json({
             error: "Launch not found!"
+            
         })
     }
     const aborted = abortLaunchById (launchId);
