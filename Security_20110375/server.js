@@ -86,7 +86,7 @@ app.get('/failure', (req, res) => {
 });
 
 app.get('/secret',checkLoggedIn, (req, res) => {
-    return res.send('Your secret key is 20110406')
+    return res.send('Your secret key is 20110375')
 });
 
 app.get('/', (req, res)=> {
