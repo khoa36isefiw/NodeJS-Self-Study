@@ -75,8 +75,9 @@ app.get('/auth/google',
     }),
 );
 
+// Removes req.user and clears any logged in session
 app.get('/auth/logout', (req, res)=>{
-    req.logout(); // Removes req.user and clears any logged in session
+    req.logout(); 
     return res.redirect('/');
 });
 
